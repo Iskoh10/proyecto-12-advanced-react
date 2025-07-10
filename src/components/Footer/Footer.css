@@ -1,0 +1,10 @@
+footer {
+  width: 100%;
+  height: 5svh;
+  background-color: var(--isc-secondary-color);
+}
+footer > p {
+  color: var(--isc-primary-color);
+  font-weight: bold;
+  text-align: center;
+}

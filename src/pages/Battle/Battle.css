@@ -1,0 +1,178 @@
+.battle {
+  width: 100%;
+  height: 100dvh;
+  flex-direction: column;
+  background-color: var(--isc-sorcerer-color);
+}
+
+.combat-area {
+  position: relative;
+  width: 80%;
+  border-radius: 2rem;
+  padding: 5rem 2rem;
+  background-color: rgb(var(--isc-accent-color));
+  box-shadow: inset 0 0 0 4px rgb(var(--isc-accent-color)),
+    inset 0 0 0 26px rgb(var(--isc-accent-color)), inset 0 0 0 35px white;
+}
+
+.bg-tatami {
+  position: absolute;
+  opacity: 0.5;
+  inset: 0;
+  margin: auto;
+  filter: blur(1px);
+}
+
+.combat-area::before,
+.combat-area::after {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.combat-area::before {
+  bottom: 2%;
+  left: 2%;
+  background-color: red;
+}
+
+.combat-area::after {
+  top: 2%;
+  right: 2%;
+  background-color: #3d3dc0;
+}
+
+.combat-area p {
+  z-index: 2;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: var(--isc-primary-color);
+  background-color: var(--isc-secondary-color);
+}
+
+.battling .combat-area p {
+  display: none;
+}
+
+.no-battling {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.my-creature-card .card-container img {
+  transform: rotateY(180deg);
+}
+
+.my-creature-card:hover .card-container img {
+  transform: rotateY(180deg);
+}
+
+.battle .card-container {
+  pointer-events: none;
+  overflow: hidden;
+  margin: auto;
+}
+
+.battle .stats {
+  width: 250px;
+  align-items: center;
+}
+
+.battle .details {
+  display: none;
+}
+
+.battle .download-btn {
+  display: none;
+}
+
+.battling {
+  position: relative;
+  width: 60%;
+  height: 80%;
+  background-image: url('/tatami.png'),
+    linear-gradient(
+      to bottom,
+      #53db93 0%,
+      #c2f48a 10%,
+      #d5f775 20%,
+      #e8fb60 30%,
+      #c2f48a 40%,
+      #53db93 50%,
+      #c2f48a 60%,
+      #e8fb60 70%,
+      #d5f775 80%,
+      #c2f48a 90%,
+      #53db93 100%
+    );
+
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.battling-time {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.img-container-creature {
+  width: 40%;
+  position: absolute;
+  bottom: 25%;
+  left: 10%;
+  transform: rotateY(180deg);
+  animation: myCreature 1s ease infinite alternate;
+}
+
+.img-container-enemy {
+  width: 30%;
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  animation: enemy 3s ease-out infinite alternate;
+}
+
+.img-container-creature > img,
+.img-container-enemy > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+@keyframes myCreature {
+  0% {
+    transform: rotateY(180deg) translateX(0%) translatey(0%);
+  }
+  50% {
+    transform: rotateY(180deg) translateX(-45%) translateY(-45%);
+  }
+  100% {
+    transform: rotateY(180deg) translateX(10%) translateY(10%);
+  }
+}
+
+@keyframes enemy {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-30%);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}
+
+.battle-end {
+  justify-content: center;
+}
+
+.battle-end .card .front-details {
+  clip-path: none;
+  color: var(--isc-primary-color);
+}

@@ -1,0 +1,73 @@
+.card {
+  border-radius: 2rem;
+}
+
+.card-header {
+  font-size: 1rem;
+}
+
+.stats {
+  background-color: rgb(var(--isc-accent-color));
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+
+.front-details {
+  justify-content: center;
+  padding-left: 1rem;
+  clip-path: inset(0 100% 0 0);
+}
+
+.front-details p {
+  font-size: 1rem;
+}
+
+.card:hover .front-details {
+  clip-path: inset(0 0 0 0);
+  color: var(--isc-primary-color);
+}
+
+.card:hover .beast-img-container > img {
+  transform: scale(1.2) translateY(-30px);
+}
+
+.battle-modal {
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 200px;
+  gap: 2rem;
+  padding: 0 1rem;
+  border-radius: 1rem;
+}
+
+.battle-modal > p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.btns-battle-modal {
+  gap: 1rem;
+}
+
+.btns-battle-modal > button:first-of-type {
+  animation: shadow-btn 1s ease infinite;
+}
+
+@keyframes shadow-btn {
+  0% {
+    box-shadow: 0 0 0 0 black;
+  }
+  100% {
+    box-shadow: 1px 1px 10px 0 black;
+  }
+}
+
+.btns-battle-modal + .close-btn-modal {
+  background-color: var(--isc-primary-color);
+  border: 1px solid rgb(var(--isc-accent-color));
+  color: var(--isc-secondary-color);
+}

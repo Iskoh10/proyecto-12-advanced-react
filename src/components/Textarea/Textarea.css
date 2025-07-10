@@ -1,0 +1,34 @@
+.textarea-container {
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.textarea-container textarea {
+  width: 90%;
+  font-size: 1rem;
+  padding: 1rem;
+  margin-bottom: 1em;
+}
+
+.textarea-container label {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  white-space: nowrap;
+  opacity: 0.5;
+  transition: all 0.5s ease;
+}
+
+.textarea-container textarea:focus + label,
+.textarea-container textarea:not(:placeholder-shown) + label {
+  top: -20px;
+  padding: 0.2em;
+  transform: translateX(0);
+  background-color: var(--isc-primary-color);
+  left: 10px;
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  opacity: 1;
+}

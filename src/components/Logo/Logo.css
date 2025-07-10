@@ -1,0 +1,13 @@
+.container-logo {
+  width: 20%;
+}
+
+.container-logo > a {
+  width: 100%;
+}
+
+.container-logo > a > img {
+  object-fit: contain;
+  width: 60%;
+  filter: drop-shadow(0 0 10px var(--isc-primary-color));
+}

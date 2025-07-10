@@ -1,0 +1,84 @@
+.creation-form {
+  width: 100%;
+  height: 80svh;
+  background-color: var(--isc-primary-color);
+  background-image: url('https://www.transparenttextures.com/patterns/grunge-wall.png');
+}
+
+.form-container {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.1);
+  max-width: 755px;
+  width: 100%;
+  border-radius: 1em;
+  padding: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+.image-form {
+  width: 300px;
+}
+
+.image-form > img {
+  object-fit: contain;
+  width: 90%;
+}
+
+.creation-beast-form {
+  position: relative;
+  flex-direction: column;
+  border-radius: 1em;
+  max-height: 650px;
+  max-width: 755px;
+  min-width: 400px;
+}
+
+.creation-beast-form legend {
+  margin-bottom: 1em;
+}
+
+.form-container .create-btn {
+  font-size: 1.5rem;
+  margin: 1em auto;
+  display: block;
+}
+
+.error-panel {
+  flex-direction: column;
+  position: fixed;
+  right: 1rem;
+  top: 15%;
+  transform: translateY(-50%);
+  gap: 1rem;
+  padding: 1rem;
+  background-color: rgb(253, 196, 196);
+  border-left: 4px solid red;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 250px;
+}
+
+.error-message {
+  color: red;
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  .image-form {
+    display: none;
+  }
+
+  .creation-form {
+    height: 85svh;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .creation-form .textarea-container label {
+    top: 15px;
+  }
+}
+
+/* Estilar carta y mejorarla en ui/ux */

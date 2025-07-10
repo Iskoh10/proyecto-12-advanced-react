@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+:root {
+  /* COLORS */
+  --isc-primary-color: #f8f6f1;
+  --isc-secondary-color: #1c1c1c;
+  --isc-accent-color: 74, 144, 226;
+
+  --isc-warrior-color: #cd2e1d;
+  --isc-sorcerer-color: #2980b9;
+  --isc-assassin-color: #7d7777;
+  --isc-tank-color: #bb6013;
+  --isc-healer-color: #aaf683;
+  --isc-necromancer-color: #8e44ad;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'MedievalSharp', cursive;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  padding: 1em 2em;
+  font-size: 2em;
+  font-weight: bold;
+}

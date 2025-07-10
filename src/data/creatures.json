@@ -1,0 +1,232 @@
+[
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
+    "assignedAbility": "lightning-rod",
+    "beastType": {
+      "name": "Protector",
+      "color": "var(--isc-tank-color)"
+    },
+    "symbol": "grass.svg",
+    "name": "fsa",
+    "atkName": "sdf",
+    "defName": "f",
+    "description": "saf",
+    "mainAttribute": "Fuerza",
+    "stats": {
+      "fuerza": 45,
+      "defensa": 24,
+      "velocidad": 26,
+      "inteligencia": 0,
+      "agilidad": 5,
+      "vida": 45
+    },
+    "date": "2025-07-06T17:39:05.585Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/99.svg",
+    "assignedAbility": "hyper-cutter",
+    "beastType": {
+      "name": "Sanador",
+      "color": "var(--isc-healer-color)"
+    },
+    "hp": 55,
+    "symbol": "electric.svg",
+    "name": "Tiamant",
+    "atkName": "Oclusión",
+    "defName": "Halo Venenoso",
+    "description": "Serpúlido de campo",
+    "mainAttribute": "Fuerza",
+    "stats": {
+      "fuerza": 40,
+      "defensa": 17,
+      "velocidad": 19,
+      "inteligencia": 17,
+      "agilidad": 7
+    },
+    "date": "2025-07-06T18:12:10.562Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg",
+    "assignedAbility": "lightning-rod",
+    "beastType": {
+      "name": "Protector",
+      "color": "var(--isc-tank-color)"
+    },
+    "hp": 35,
+    "symbol": "bug.svg",
+    "name": "Isco",
+    "atkName": "asf",
+    "defName": "safd",
+    "description": "asfd",
+    "mainAttribute": "Velocidad",
+    "stats": {
+      "velocidad": 59,
+      "fuerza": 0,
+      "defensa": 0,
+      "inteligencia": 35,
+      "agilidad": 6
+    },
+    "date": "2025-07-06T18:32:25.429Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
+    "assignedAbility": "lightning-rod",
+    "beastType": {
+      "name": "Protector",
+      "color": "var(--isc-tank-color)"
+    },
+    "hp": 45,
+    "symbol": "grass.svg",
+    "name": "fsa1",
+    "atkName": "sdf",
+    "defName": "f",
+    "description": "saf",
+    "mainAttribute": "Fuerza",
+    "stats": {
+      "fuerza": 45,
+      "defensa": 24,
+      "velocidad": 26,
+      "inteligencia": 0,
+      "agilidad": 5
+    },
+    "date": "2025-07-06T17:39:05.585Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
+    "assignedAbility": "lightning-rod",
+    "beastType": {
+      "name": "Protector",
+      "color": "var(--isc-tank-color)"
+    },
+    "hp": 45,
+    "symbol": "grass.svg",
+    "name": "fsa2",
+    "atkName": "sdf",
+    "defName": "f",
+    "description": "saf",
+    "mainAttribute": "Fuerza",
+    "stats": {
+      "fuerza": 45,
+      "defensa": 24,
+      "velocidad": 26,
+      "inteligencia": 0,
+      "agilidad": 5
+    },
+    "date": "2025-07-06T17:39:05.585Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
+    "assignedAbility": "lightning-rod",
+    "beastType": {
+      "name": "Protector",
+      "color": "var(--isc-tank-color)"
+    },
+    "hp": 45,
+    "symbol": "grass.svg",
+    "name": "fsa3",
+    "atkName": "sdf",
+    "defName": "f",
+    "description": "saf",
+    "mainAttribute": "Fuerza",
+    "stats": {
+      "fuerza": 45,
+      "defensa": 24,
+      "velocidad": 26,
+      "inteligencia": 0,
+      "agilidad": 5
+    },
+    "date": "2025-07-06T17:39:05.585Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
+    "assignedAbility": "lightning-rod",
+    "beastType": {
+      "name": "Protector",
+      "color": "var(--isc-tank-color)"
+    },
+    "hp": 45,
+    "symbol": "grass.svg",
+    "name": "fsa4",
+    "atkName": "sdf",
+    "defName": "f",
+    "description": "saf",
+    "mainAttribute": "Fuerza",
+    "stats": {
+      "fuerza": 45,
+      "defensa": 24,
+      "velocidad": 26,
+      "inteligencia": 0,
+      "agilidad": 5
+    },
+    "date": "2025-07-06T17:39:05.585Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
+    "assignedAbility": "lightning-rod",
+    "beastType": {
+      "name": "Protector",
+      "color": "var(--isc-tank-color)"
+    },
+    "hp": 45,
+    "symbol": "grass.svg",
+    "name": "fsa5",
+    "atkName": "sdf",
+    "defName": "f",
+    "description": "saf",
+    "mainAttribute": "Fuerza",
+    "stats": {
+      "fuerza": 45,
+      "defensa": 24,
+      "velocidad": 26,
+      "inteligencia": 0,
+      "agilidad": 5
+    },
+    "date": "2025-07-06T17:39:05.585Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
+    "assignedAbility": "lightning-rod",
+    "beastType": {
+      "name": "Protector",
+      "color": "var(--isc-tank-color)"
+    },
+    "hp": 45,
+    "symbol": "grass.svg",
+    "name": "fsa6",
+    "atkName": "sdf",
+    "defName": "f",
+    "description": "saf",
+    "mainAttribute": "Fuerza",
+    "stats": {
+      "fuerza": 45,
+      "defensa": 24,
+      "velocidad": 26,
+      "inteligencia": 0,
+      "agilidad": 5
+    },
+    "date": "2025-07-06T17:39:05.585Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
+    "assignedAbility": "lightning-rod",
+    "beastType": {
+      "name": "Protector",
+      "color": "var(--isc-tank-color)"
+    },
+    "hp": 45,
+    "symbol": "grass.svg",
+    "name": "fsa7",
+    "atkName": "sdf",
+    "defName": "f",
+    "description": "saf",
+    "mainAttribute": "Fuerza",
+    "stats": {
+      "fuerza": 45,
+      "defensa": 24,
+      "velocidad": 26,
+      "inteligencia": 0,
+      "agilidad": 5
+    },
+    "date": "2025-07-06T17:39:05.585Z"
+  }
+]

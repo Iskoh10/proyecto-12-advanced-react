@@ -1,0 +1,95 @@
+main.not-found {
+  width: 100%;
+  height: 100svh;
+  flex-direction: column;
+  background-color: rgb(var(--isc-accent-color));
+}
+
+section.not-found {
+  width: 500px;
+  height: 500px;
+  border-radius: 1rem;
+  border: 5px dashed var(--isc-secondary-color);
+  flex-direction: column;
+  position: relative;
+  font-size: 150px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 2rem;
+  background-image: radial-gradient(
+      circle,
+      var(--isc-secondary-color) 40px,
+      transparent 41px
+    ),
+    radial-gradient(
+      circle at center bottom,
+      transparent 34px,
+      var(--isc-secondary-color) 35px,
+      var(--isc-secondary-color) 39px,
+      transparent 40px
+    ),
+    radial-gradient(circle, pink 15px, transparent 15%),
+    radial-gradient(circle, pink 15px, transparent 15%),
+    radial-gradient(
+      ellipse 200px 50px at center top,
+      transparent 150px,
+      var(--isc-secondary-color) 151px,
+      var(--isc-secondary-color) 160px,
+      transparent 156px
+    );
+  background-position: -90px -130px, 105px 120px, -180px -20px, 180px -20px,
+    0 350px;
+}
+
+.top-half,
+.bottom-half {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+
+.top-half {
+  top: 37%;
+  left: 8px;
+  transform: translateY(-5px);
+  clip-path: inset(0 0 50% 0);
+}
+
+.bottom-half {
+  top: 35%;
+  transform: translateY(3px);
+  clip-path: inset(50% 0 0 0);
+}
+
+.lost-msg {
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+}
+
+.link-container {
+  position: relative;
+  width: 20%;
+  height: 15%;
+  border-radius: 100% 0% 50% 50% / 100% 50% 50% 0%;
+  background-color: var(--isc-secondary-color);
+  transform: rotate(20deg);
+  cursor: pointer;
+}
+
+.link-container:hover {
+  background-color: var(--isc-primary-color);
+}
+
+.link-container:hover a {
+  color: var(--isc-secondary-color);
+}
+
+main.not-found a {
+  color: var(--isc-primary-color);
+  text-align: center;
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  transform: rotate(-20deg);
+}

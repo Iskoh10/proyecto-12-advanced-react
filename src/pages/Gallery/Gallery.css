@@ -1,0 +1,5 @@
+.gallery {
+  width: 100%;
+  background-color: var(--isc-primary-color);
+  background-image: url('https://www.transparenttextures.com/patterns/grunge-wall.png');
+}

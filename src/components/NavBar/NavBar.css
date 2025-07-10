@@ -1,0 +1,13 @@
+nav {
+  width: 80%;
+}
+
+.ul-navbar {
+  width: 100%;
+  justify-content: space-around;
+}
+
+.ul-navbar a {
+  color: var(--isc-primary-color);
+  font-size: clamp(1rem, 5vw, 1.5rem);
+}

@@ -1,0 +1,8 @@
+.stat-item {
+  width: 350px;
+  gap: 1rem;
+}
+
+.stat-item > * {
+  justify-content: space-between;
+}
