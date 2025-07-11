@@ -1,20 +1,22 @@
 import './Battle.css';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useCreaturesContext } from '../../Providers/CreaturesContext';
-import Card from '../../components/Card/Card';
 import Button from '../../components/Button/Button';
 import useBattle from '../../hooks/useBattle/useBattle';
 import UseReducer from '../../components/UseReducer/UseReducer';
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 
 const Battle = () => {
   const { creatureId } = useParams();
   const { creatures, updateCreature } = useCreaturesContext();
+  const [showCompletedMsg, setShowCompletedMsg] = useState(false);
 
   const { creature, enemy, isBattling, battleResult, startBattle } = useBattle({
     creatures,
     creatureId
   });
+
+  const navigate = useNavigate();
 
   const rewardPoints =
     battleResult === 'Ganado' ? 5 : battleResult === 'Perdido' ? 1 : 0;
@@ -43,8 +45,10 @@ const Battle = () => {
       }
     };
     updateCreature(improvingCreature);
-    console.log('Mejorando criatura con:', improvingCreature);
-    alert('Cambios actualizados');
+    setShowCompletedMsg(true);
+    setTimeout(() => {
+      navigate('/gallery');
+    }, 2000);
   };
 
   return (
@@ -53,9 +57,9 @@ const Battle = () => {
         <p>Criatura no encontrada</p>
       ) : battleResult === '' ? (
         <>
-          <h1>
-            {creature.name} <span>Vs</span> {enemy?.name}
-          </h1>
+          <h2>
+            {creature.name} <span>~ Vs ~</span> {enemy?.name}
+          </h2>
           <section
             className={`combat-area flex-container ${
               isBattling ? 'battling' : ''
@@ -73,14 +77,66 @@ const Battle = () => {
               </div>
             ) : (
               <div className='no-battling flex-container'>
-                <img
-                  src='/favicon.png'
-                  alt='favicon image'
-                  className='bg-tatami'
-                />
-                <Card creature={creature} className='my-creature-card' />
-                <p>Vs</p>
-                {enemy && <Card creature={enemy} className='enemy-card' />}
+                <img src='/react.svg' alt='react icon' className='bg-tatami' />
+                <div className='my-creature flex-container'>
+                  <h3>{creature.name}</h3>
+                  <div className='img-container'>
+                    <img src={creature.imgUrl} alt='creature-image' />
+                  </div>
+                  <div className='stats-in-fight flex-container'>
+                    <h2>Stats</h2>
+                    <p>
+                      Vida <span>{creature.stats.vida}</span>
+                    </p>
+                    <p>
+                      Fuerza <span>{creature.stats.fuerza}</span>
+                    </p>
+                    <p>
+                      Defensa <span>{creature.stats.defensa}</span>
+                    </p>
+                    <p>
+                      Velocidad <span>{creature.stats.velocidad}</span>
+                    </p>
+                    <p>
+                      Inteligencia <span>{creature.stats.inteligencia}</span>
+                    </p>
+                    <p>
+                      Agilidad <span>{creature.stats.agilidad}</span>
+                    </p>
+                  </div>
+                </div>
+                <div className='vs flex-container'>
+                  <p>Vs</p>
+                </div>
+                {enemy && (
+                  <div className='enemy flex-container'>
+                    <h3>{enemy.name}</h3>
+                    <div className='img-container'>
+                      <img src={enemy.imgUrl} alt='enemy-image' />
+                    </div>
+                    <div className='stats-in-fight flex-container'>
+                      <h2>Stats</h2>
+                      <p>
+                        Vida <span>{enemy.stats.vida}</span>
+                      </p>
+                      <p>
+                        Fuerza <span>{enemy.stats.fuerza}</span>
+                      </p>
+                      <p>
+                        Defensa <span>{enemy.stats.defensa}</span>
+                      </p>
+                      <p>
+                        Velocidad <span>{enemy.stats.velocidad}</span>
+                      </p>
+                      <p>
+                        Inteligencia <span>{enemy.stats.inteligencia}</span>
+                      </p>
+                      <p>
+                        Agilidad <span>{enemy.stats.agilidad}</span>
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
             )}
           </section>
@@ -90,7 +146,33 @@ const Battle = () => {
         <>
           <h1>Has {battleResult}</h1>
           <section className='combat-area flex-container battle-end'>
-            <Card creature={creature} />
+            <div className='my-creature flex-container'>
+              <h3>{creature.name}</h3>
+              <div className='img-container'>
+                <img src={creature.imgUrl} alt='creature-image' />
+              </div>
+              <div className='stats-in-fight flex-container'>
+                <h2>Stats</h2>
+                <p>
+                  Vida <span>{creature.stats.vida}</span>
+                </p>
+                <p>
+                  Fuerza <span>{creature.stats.fuerza}</span>
+                </p>
+                <p>
+                  Defensa <span>{creature.stats.defensa}</span>
+                </p>
+                <p>
+                  Velocidad <span>{creature.stats.velocidad}</span>
+                </p>
+                <p>
+                  Inteligencia <span>{creature.stats.inteligencia}</span>
+                </p>
+                <p>
+                  Agilidad <span>{creature.stats.agilidad}</span>
+                </p>
+              </div>
+            </div>
             {initialState && (
               <UseReducer
                 initialState={initialState}
@@ -98,6 +180,15 @@ const Battle = () => {
               />
             )}
           </section>
+          {showCompletedMsg && (
+            <>
+              <div className='backdrop'>
+                <div className='finalMsg'>
+                  <p>Datos actualizados!!</p>
+                </div>
+              </div>
+            </>
+          )}
         </>
       )}
     </main>
@@ -105,5 +196,3 @@ const Battle = () => {
 };
 
 export default Battle;
-
-//! Quitar el hover mientras battling, agregar boton aceptar cambios de puntos y actualizar los datos en la carta de la criatura, cambiar estructura del objeto criatura para que sea mas limpia y no haya duplicados, meter en stats vida y todos para evitar duplicados en la raiz del objeto

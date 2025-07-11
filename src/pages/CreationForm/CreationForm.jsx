@@ -5,8 +5,8 @@ import Button from '../../components/Button/Button';
 import Select from '../../components/Select/Select';
 import Textarea from '../../components/Textarea/Textarea';
 import Input from '../../components/Input/Input';
-import FullCard from '../../components/FullCard/FullCard';
 import { useCreaturesContext } from '../../Providers/CreaturesContext';
+import NewCard from '../../components/NewCard/NewCard';
 
 const CreationForm = () => {
   const { addCreature } = useCreaturesContext();
@@ -80,7 +80,7 @@ const CreationForm = () => {
         </div>
       )}
       {formState.name !== '' ? (
-        <FullCard
+        <NewCard
           isOpen={showModal}
           onClose={() => setShowModal(false)}
           name={formState.name}

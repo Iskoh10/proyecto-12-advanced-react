@@ -6,3 +6,8 @@
 .stat-item > * {
   justify-content: space-between;
 }
+
+.sum-btn,
+.subs-btn {
+  margin: 0;
+}

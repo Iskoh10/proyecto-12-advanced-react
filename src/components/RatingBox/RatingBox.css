@@ -12,12 +12,12 @@
 .rating .stars {
   display: flex;
   flex-direction: row-reverse;
-  gap: 20px;
+  gap: 25px;
 }
 
 .rating label {
-  width: 30px;
-  height: 30px;
+  width: 5px;
+  height: 5px;
   position: relative;
   cursor: pointer;
   padding: 0 10px;

@@ -70,15 +70,7 @@
   }
 
   .creation-form {
-    height: 85svh;
+    height: 90svh;
     padding: 1rem;
   }
 }
-
-@media screen and (max-width: 480px) {
-  .creation-form .textarea-container label {
-    top: 15px;
-  }
-}
-
-/* Estilar carta y mejorarla en ui/ux */

@@ -1,7 +1,5 @@
-- mejorar formulario con una foto lateral de shiinotic
-
-- incluir textura css
 - hacer el loader
-- estilar y meter media queries
+- estilar y meter media queries voy por battle
 - actualizar json criaturas
-- navegar a galeria cuando acabe upgrade de puntos, mostrar antes un mensaje de datos actualizados con un setTimeOut de 5seg
+- mejorar las cartas
+- hacer componentes, codigo repetido en battle y en card, divs stats.

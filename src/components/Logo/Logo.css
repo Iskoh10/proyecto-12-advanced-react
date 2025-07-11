@@ -1,5 +1,6 @@
 .container-logo {
   width: 20%;
+  max-width: 200px;
 }
 
 .container-logo > a {

@@ -30,10 +30,7 @@ const Card = ({ creature, className = '' }) => {
 
   return (
     <>
-      <article
-        className={`card flex-container ${className}`}
-        style={{ backgroundColor: creature.beastType.color }}
-      >
+      <article className={`card flex-container ${className}`}>
         <div className='card-container flex-container'>
           <header className='card-header flex-container'>
             {creature.beastType && (
@@ -50,7 +47,26 @@ const Card = ({ creature, className = '' }) => {
                 }
               />
             </div>
+            <div
+              className='beast-type-color flex-container'
+              style={{ backgroundColor: creature.beastType.color }}
+            ></div>
           </header>
+          <div className='details flex-container'>
+            <p>
+              Descripción: <span>{creature.description}</span>
+            </p>
+            <div className='atk-def flex-container'>
+              <div className='atk-name-value flex-container'>
+                <p>Ataque</p>
+                <p>{creature.atkName}</p>
+              </div>
+              <div className='def-name-value flex-container'>
+                <p>Defensa</p>
+                <p> {creature.defName}</p>
+              </div>
+            </div>
+          </div>
           <figure className='beast-img-container'>
             {creature.imgUrl && (
               <img src={creature.imgUrl} alt={creature.name} />
@@ -73,8 +89,9 @@ const Card = ({ creature, className = '' }) => {
               />
 
               <div
-                className='stats flex-container'
-                style={{ backgroundColor: creature.download ? 'red' : '' }}
+                className={`stats flex-container ${
+                  creature.download ? 'is-download' : ''
+                }`}
               >
                 <h2>Stats</h2>
                 <p>
@@ -94,23 +111,6 @@ const Card = ({ creature, className = '' }) => {
                 </p>
                 <p>
                   Agilidad <span>{creature.stats.agilidad}</span>
-                </p>
-              </div>
-              <div className='details'>
-                <p>
-                  Habilidad asignada ➡️ <span>{creature.assignedAbility}</span>
-                </p>
-                <p>
-                  Ataque ➡️ <span>{creature.atkName}</span>
-                </p>
-                <p>
-                  Defensa ➡️ <span>{creature.defName}</span>
-                </p>
-                <p>
-                  Descripción ➡️ <span>{creature.description}</span>
-                </p>
-                <p>
-                  Principal Cualidad ➡️ <span>{creature.mainAttribute}</span>
                 </p>
               </div>
               {creature.download && (

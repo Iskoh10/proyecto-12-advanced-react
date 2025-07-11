@@ -1,9 +1,9 @@
 .favHeart {
   --w-fav: grey;
   position: absolute;
-  top: 10px;
+  top: 25px;
   left: 10px;
-  width: 50px;
+  width: 30px;
   aspect-ratio: 1;
   background: radial-gradient(circle at 60% 65%, var(--w-fav) 64%, #0000 65%)
       top left/50% 50%,

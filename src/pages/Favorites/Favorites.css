@@ -30,3 +30,11 @@
 .favs-gallery .card-container:hover {
   z-index: 2;
 }
+
+.favs-gallery .card-container {
+  pointer-events: none;
+}
+
+.favs-gallery .download-btn {
+  display: none;
+}

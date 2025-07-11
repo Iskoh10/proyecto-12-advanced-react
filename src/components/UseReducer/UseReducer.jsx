@@ -1,6 +1,7 @@
 import { useReducer } from 'react';
 import { gameReducer } from '../../utils/reducer';
 import StatItem from '../StatItem/StatItem';
+import Button from '../Button/Button';
 
 const UseReducer = ({ initialState, onConfirm }) => {
   const [state, dispatch] = useReducer(gameReducer, initialState);
@@ -8,7 +9,7 @@ const UseReducer = ({ initialState, onConfirm }) => {
     state;
 
   return (
-    <section className='puntuation-board'>
+    <section className='puntuation-board flex-container'>
       <p>Puntos ganados: {points}</p>
       <StatItem className='hp' payload='vida' stat={vida} dispatch={dispatch} />
       <StatItem
@@ -41,9 +42,11 @@ const UseReducer = ({ initialState, onConfirm }) => {
         stat={agilidad}
         dispatch={dispatch}
       />
-      <button className='confirm-btn' onClick={() => onConfirm(state)}>
-        Aceptar cambios
-      </button>
+      <Button
+        className='confirm-btn'
+        text='Aceptar cambios'
+        onClick={() => onConfirm(state)}
+      />
     </section>
   );
 };
