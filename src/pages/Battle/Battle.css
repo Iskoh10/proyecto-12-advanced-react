@@ -7,6 +7,8 @@
 }
 
 .battle > h2 {
+  font-size: clamp(1rem, 8vw, 2rem);
+  text-align: center;
   margin-bottom: 1rem;
 }
 
@@ -81,10 +83,6 @@
   object-fit: contain;
   width: 100%;
   height: 100%;
-}
-
-.my-creature .img-container > img {
-  transform: rotateY(-180deg);
 }
 
 .my-creature .img-container:hover {
@@ -191,10 +189,6 @@
   width: 100%;
 }
 
-.img-container-creature > img {
-  transform: rotateY(-180deg);
-}
-
 @keyframes myCreature {
   0% {
     transform: translateX(0%) translatey(0%);
@@ -272,9 +266,70 @@
   z-index: 2;
 }
 
-/* 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .battle {
     padding: 1rem;
   }
-} */
+
+  .no-battling {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .img-container {
+    width: 50%;
+  }
+
+  .my-creature,
+  .enemy {
+    position: relative;
+    flex-direction: row;
+    width: 90%;
+    gap: 2rem;
+  }
+
+  .my-creature > h3 {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .enemy > h3 {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    z-index: 1;
+  }
+
+  .vs {
+    width: 50px;
+    height: 50px;
+  }
+
+  .stats-in-fight {
+    width: 50%;
+  }
+
+  .battling {
+    min-height: unset;
+    height: 400px;
+  }
+
+  .img-container-creature {
+    bottom: 180px;
+    left: 50px;
+  }
+
+  .img-container-enemy {
+    top: 180px;
+  }
+
+  .battle-end {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .battle-end .puntuation-board {
+    margin-left: 0;
+  }
+}

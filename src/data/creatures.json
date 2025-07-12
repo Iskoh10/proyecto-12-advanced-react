@@ -1,17 +1,111 @@
 [
   {
-    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
-    "assignedAbility": "lightning-rod",
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/245.svg",
+    "assignedAbility": "hydro-pump",
     "beastType": {
       "name": "Protector",
       "color": "var(--isc-tank-color)"
     },
+    "symbol": "water.svg",
+    "name": "Suicune",
+    "atkName": "Surf",
+    "defName": "Pulso Dragón",
+    "description": "Suicune emana la pureza de los manantiales. Suele corretear por el campo con gran elegancia. Este Pokémon tiene el poder de purificar el agua contaminada.",
+    "mainAttribute": "Defensa",
+    "reverse": true,
+    "stats": {
+      "fuerza": 24,
+      "defensa": 45,
+      "velocidad": 26,
+      "inteligencia": 0,
+      "agilidad": 5,
+      "vida": 45
+    },
+    "date": "2025-07-06T17:39:05.585Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/252.svg",
+    "assignedAbility": "swift-trike",
+    "beastType": {
+      "name": "Asesino",
+      "color": "var(--isc-assassin-color)"
+    },
     "symbol": "grass.svg",
-    "name": "fsa",
-    "atkName": "sdf",
-    "defName": "f",
-    "description": "saf",
+    "name": "Treecko",
+    "atkName": "Bomba Germen",
+    "defName": "Danza Espada",
+    "description": "Tiene pequeñas púas en las plantas de los pies que le permiten andar por techos y paredes sin caerse.",
     "mainAttribute": "Fuerza",
+    "stats": {
+      "fuerza": 7,
+      "defensa": 17,
+      "velocidad": 19,
+      "inteligencia": 17,
+      "agilidad": 40,
+      "vida": 55
+    },
+    "date": "2025-07-06T18:12:10.562Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/284.svg",
+    "assignedAbility": "illusion-veil",
+    "beastType": {
+      "name": "Mago",
+      "color": "var(--isc-sorcerer-color)"
+    },
+    "symbol": "bug.svg",
+    "name": "Masquerain",
+    "atkName": "Onda Ígnea",
+    "defName": "Pantalla Luz",
+    "description": "Sus cuatro alas le permiten volar en cualquier dirección a su antojo.",
+    "mainAttribute": "Velocidad",
+    "stats": {
+      "velocidad": 59,
+      "fuerza": 0,
+      "defensa": 0,
+      "inteligencia": 35,
+      "agilidad": 6,
+      "vida": 35
+    },
+    "date": "2025-07-06T18:32:25.429Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/359.svg",
+    "assignedAbility": "shadow-edge",
+    "beastType": {
+      "name": "Asesino",
+      "color": "var(--isc-assassin-color)"
+    },
+    "symbol": "dark.svg",
+    "name": "Absol",
+    "atkName": "Tajo Umbrío",
+    "defName": "Protección",
+    "description": "Corre por montañas y prados a la velocidad del viento. Su cuerno curvado tiene tal sensibilidad que puede predecir catástrofes naturales.",
+    "mainAttribute": "Velocidad",
+    "stats": {
+      "fuerza": 26,
+      "defensa": 24,
+      "velocidad": 45,
+      "inteligencia": 0,
+      "agilidad": 5,
+      "vida": 45
+    },
+    "date": "2025-07-06T17:39:05.585Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/6.svg",
+    "assignedAbility": "flame-surge",
+    "beastType": {
+      "name": "Guerrero",
+      "color": "var(--isc-warrior-color)"
+    },
+    "symbol": "fire.svg",
+    "name": "Charizard",
+    "atkName": "Lanzallamas",
+    "defName": "Danza LLama",
+    "description": "Cuando se enfurece de verdad, la llama de la punta de su cola se vuelve de color azul claro.",
+    "mainAttribute": "Fuerza",
+    "reverse": true,
     "stats": {
       "fuerza": 45,
       "defensa": 24,
@@ -23,209 +117,120 @@
     "date": "2025-07-06T17:39:05.585Z"
   },
   {
-    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/99.svg",
-    "assignedAbility": "hyper-cutter",
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/300.svg",
+    "assignedAbility": "playful-aura",
     "beastType": {
       "name": "Sanador",
       "color": "var(--isc-healer-color)"
     },
-    "hp": 55,
-    "symbol": "electric.svg",
-    "name": "Tiamant",
-    "atkName": "Oclusión",
-    "defName": "Halo Venenoso",
-    "description": "Serpúlido de campo",
-    "mainAttribute": "Fuerza",
+    "symbol": "normal.svg",
+    "name": "Skitty",
+    "atkName": "Destructor",
+    "defName": "Canto",
+    "description": "A Skitty le encanta mover cosas e ir detrás de ellas. Es de todos sabido que se dedica a ir detrás de su propia cola y que, al final, acaba mareándose.",
+    "mainAttribute": "Agilidad",
     "stats": {
-      "fuerza": 40,
-      "defensa": 17,
-      "velocidad": 19,
-      "inteligencia": 17,
-      "agilidad": 7
+      "fuerza": 5,
+      "defensa": 24,
+      "velocidad": 26,
+      "inteligencia": 0,
+      "agilidad": 45,
+      "vida": 45
     },
-    "date": "2025-07-06T18:12:10.562Z"
+    "date": "2025-07-06T17:39:05.585Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/54.svg",
+    "assignedAbility": "mind-burst",
+    "beastType": {
+      "name": "Mago",
+      "color": "var(--isc-sorcerer-color)"
+    },
+    "symbol": "water.svg",
+    "name": "Psyduck",
+    "atkName": "Confusión",
+    "defName": "Anulación",
+    "description": " Padece continuamente dolores de cabeza. Cuando son muy fuertes, empieza a usar misteriosos poderes.",
+    "mainAttribute": "Fuerza",
+    "reverse": true,
+    "stats": {
+      "fuerza": 0,
+      "defensa": 24,
+      "velocidad": 26,
+      "inteligencia": 45,
+      "agilidad": 5,
+      "vida": 45
+    },
+    "date": "2025-07-06T17:39:05.585Z"
+  },
+  {
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/149.svg",
+    "assignedAbility": "draconic-fury",
+    "beastType": {
+      "name": "Guerrero",
+      "color": "var(--isc-warrior-color)"
+    },
+    "symbol": "dragon.svg",
+    "name": "Dragonite",
+    "atkName": "Garra Dragón",
+    "defName": "Sustituto",
+    "description": "Dicen que viven en una isla en algún lugar del océano que solo ellos habitan.",
+    "mainAttribute": "Fuerza",
+    "reverse": true,
+    "stats": {
+      "fuerza": 45,
+      "defensa": 24,
+      "velocidad": 10,
+      "inteligencia": 16,
+      "agilidad": 5,
+      "vida": 45
+    },
+    "date": "2025-07-06T17:39:05.585Z"
   },
   {
     "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/25.svg",
-    "assignedAbility": "lightning-rod",
+    "assignedAbility": "static-overload",
     "beastType": {
-      "name": "Protector",
-      "color": "var(--isc-tank-color)"
+      "name": "Mago",
+      "color": "var(--isc-sorcerer-color)"
     },
-    "hp": 35,
-    "symbol": "bug.svg",
-    "name": "Isco",
-    "atkName": "asf",
-    "defName": "safd",
-    "description": "asfd",
-    "mainAttribute": "Velocidad",
+    "symbol": "electric.svg",
+    "name": "Pikachu",
+    "atkName": "Impactrueno",
+    "defName": "Doble Equipo",
+    "description": "Cuando se enfada, este Pokémon descarga la energía que almacena en el interior de las bolsas de las mejillas.",
+    "mainAttribute": "Agilidad",
     "stats": {
-      "velocidad": 59,
-      "fuerza": 0,
-      "defensa": 0,
-      "inteligencia": 35,
-      "agilidad": 6
-    },
-    "date": "2025-07-06T18:32:25.429Z"
-  },
-  {
-    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
-    "assignedAbility": "lightning-rod",
-    "beastType": {
-      "name": "Protector",
-      "color": "var(--isc-tank-color)"
-    },
-    "hp": 45,
-    "symbol": "grass.svg",
-    "name": "fsa1",
-    "atkName": "sdf",
-    "defName": "f",
-    "description": "saf",
-    "mainAttribute": "Fuerza",
-    "stats": {
-      "fuerza": 45,
+      "fuerza": 5,
       "defensa": 24,
       "velocidad": 26,
       "inteligencia": 0,
-      "agilidad": 5
+      "agilidad": 45,
+      "vida": 45
     },
     "date": "2025-07-06T17:39:05.585Z"
   },
   {
-    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
-    "assignedAbility": "lightning-rod",
+    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/151.svg",
+    "assignedAbility": "ancestral-echo",
     "beastType": {
-      "name": "Protector",
-      "color": "var(--isc-tank-color)"
+      "name": "Nigromante",
+      "color": "var(--isc-necromancer-color)"
     },
-    "hp": 45,
-    "symbol": "grass.svg",
-    "name": "fsa2",
-    "atkName": "sdf",
-    "defName": "f",
-    "description": "saf",
+    "symbol": "psychic.svg",
+    "name": "Mew",
+    "atkName": "Psíquico",
+    "defName": "Deseo",
+    "description": "Si se observa a través de un microscopio, puede distinguirse cuán corto, fino y delicado es el pelaje de este Pokémon.",
     "mainAttribute": "Fuerza",
+    "reverse": true,
     "stats": {
       "fuerza": 45,
       "defensa": 24,
       "velocidad": 26,
-      "inteligencia": 0,
-      "agilidad": 5
-    },
-    "date": "2025-07-06T17:39:05.585Z"
-  },
-  {
-    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
-    "assignedAbility": "lightning-rod",
-    "beastType": {
-      "name": "Protector",
-      "color": "var(--isc-tank-color)"
-    },
-    "hp": 45,
-    "symbol": "grass.svg",
-    "name": "fsa3",
-    "atkName": "sdf",
-    "defName": "f",
-    "description": "saf",
-    "mainAttribute": "Fuerza",
-    "stats": {
-      "fuerza": 45,
-      "defensa": 24,
-      "velocidad": 26,
-      "inteligencia": 0,
-      "agilidad": 5
-    },
-    "date": "2025-07-06T17:39:05.585Z"
-  },
-  {
-    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
-    "assignedAbility": "lightning-rod",
-    "beastType": {
-      "name": "Protector",
-      "color": "var(--isc-tank-color)"
-    },
-    "hp": 45,
-    "symbol": "grass.svg",
-    "name": "fsa4",
-    "atkName": "sdf",
-    "defName": "f",
-    "description": "saf",
-    "mainAttribute": "Fuerza",
-    "stats": {
-      "fuerza": 45,
-      "defensa": 24,
-      "velocidad": 26,
-      "inteligencia": 0,
-      "agilidad": 5
-    },
-    "date": "2025-07-06T17:39:05.585Z"
-  },
-  {
-    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
-    "assignedAbility": "lightning-rod",
-    "beastType": {
-      "name": "Protector",
-      "color": "var(--isc-tank-color)"
-    },
-    "hp": 45,
-    "symbol": "grass.svg",
-    "name": "fsa5",
-    "atkName": "sdf",
-    "defName": "f",
-    "description": "saf",
-    "mainAttribute": "Fuerza",
-    "stats": {
-      "fuerza": 45,
-      "defensa": 24,
-      "velocidad": 26,
-      "inteligencia": 0,
-      "agilidad": 5
-    },
-    "date": "2025-07-06T17:39:05.585Z"
-  },
-  {
-    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
-    "assignedAbility": "lightning-rod",
-    "beastType": {
-      "name": "Protector",
-      "color": "var(--isc-tank-color)"
-    },
-    "hp": 45,
-    "symbol": "grass.svg",
-    "name": "fsa6",
-    "atkName": "sdf",
-    "defName": "f",
-    "description": "saf",
-    "mainAttribute": "Fuerza",
-    "stats": {
-      "fuerza": 45,
-      "defensa": 24,
-      "velocidad": 26,
-      "inteligencia": 0,
-      "agilidad": 5
-    },
-    "date": "2025-07-06T17:39:05.585Z"
-  },
-  {
-    "imgUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/118.svg",
-    "assignedAbility": "lightning-rod",
-    "beastType": {
-      "name": "Protector",
-      "color": "var(--isc-tank-color)"
-    },
-    "hp": 45,
-    "symbol": "grass.svg",
-    "name": "fsa7",
-    "atkName": "sdf",
-    "defName": "f",
-    "description": "saf",
-    "mainAttribute": "Fuerza",
-    "stats": {
-      "fuerza": 45,
-      "defensa": 24,
-      "velocidad": 26,
-      "inteligencia": 0,
-      "agilidad": 5
+      "inteligencia": 100,
+      "agilidad": 5,
+      "vida": 45
     },
     "date": "2025-07-06T17:39:05.585Z"
   }

@@ -1,6 +1,5 @@
 const downloadCreature = (creature) => {
   if (!creature || !creature.name) {
-    alert('No hay criatura');
     return;
   }
 
@@ -16,8 +15,6 @@ const downloadCreature = (creature) => {
 
   link.href = URL.createObjectURL(blob);
   link.download = `${creature.name}.json`;
-
-  alert('Descargaste los datos de tu Criatura');
 
   link.click();
   URL.revokeObjectURL(link.href);

@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 const Card = ({ creature, className = '' }) => {
   const { ratings, setRating, favorites, toggleFav } = useCreaturesContext();
   const [showModal, setShowModal] = useState(false);
+  const [downloadMsg, setDownloadMsg] = useState(false);
 
   const handleClickBattle = (e) => {
     e.stopPropagation();
@@ -23,6 +24,10 @@ const Card = ({ creature, className = '' }) => {
   const handleClickDownload = (e) => {
     e.stopPropagation();
     downloadCreature(creature);
+    setDownloadMsg(true);
+    setTimeout(() => {
+      setDownloadMsg(false);
+    }, 3000);
   };
 
   const navigate = useNavigate();
@@ -46,6 +51,10 @@ const Card = ({ creature, className = '' }) => {
                     : 'criatura'
                 }
               />
+              <div
+                className='type-color-bg'
+                style={{ backgroundColor: creature.beastType.color }}
+              ></div>
             </div>
             <div
               className='beast-type-color flex-container'
@@ -53,17 +62,29 @@ const Card = ({ creature, className = '' }) => {
             ></div>
           </header>
           <div className='details flex-container'>
+            <p>Descripción</p>
             <p>
-              Descripción: <span>{creature.description}</span>
+              {creature.description.length > 65
+                ? creature.description.slice(0, 65) + '...'
+                : creature.description}
             </p>
             <div className='atk-def flex-container'>
               <div className='atk-name-value flex-container'>
                 <p>Ataque</p>
-                <p>{creature.atkName}</p>
+                <p>
+                  {creature.atkName.length > 15
+                    ? creature.atkName.slice(0, 15) + '...'
+                    : creature.atkName}
+                </p>
               </div>
               <div className='def-name-value flex-container'>
                 <p>Defensa</p>
-                <p> {creature.defName}</p>
+                <p>
+                  {' '}
+                  {creature.defName.length > 15
+                    ? creature.defName.slice(0, 15) + '...'
+                    : creature.defName}
+                </p>
               </div>
             </div>
           </div>
@@ -148,6 +169,15 @@ const Card = ({ creature, className = '' }) => {
             />
           </div>
         </Modal>
+      )}
+      {downloadMsg && (
+        <>
+          <div className='backdrop'>
+            <div className='download-msg'>
+              <p>Los datos de tu criatura han sido descargados</p>
+            </div>
+          </div>
+        </>
       )}
     </>
   );

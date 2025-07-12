@@ -140,7 +140,9 @@ const Battle = () => {
               </div>
             )}
           </section>
-          <Button className='battle-go' text='Luchar' onClick={startBattle} />
+          {!isBattling && (
+            <Button className='battle-go' text='Luchar' onClick={startBattle} />
+          )}
         </>
       ) : (
         <>
@@ -184,7 +186,7 @@ const Battle = () => {
             <>
               <div className='backdrop'>
                 <div className='finalMsg'>
-                  <p>Datos actualizados!!</p>
+                  <p>Actualizando datos...!!</p>
                 </div>
               </div>
             </>

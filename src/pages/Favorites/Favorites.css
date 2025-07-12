@@ -5,7 +5,13 @@
   flex-direction: column;
 }
 
+.favorites > h2 {
+  font-size: clamp(1rem, 8vw, 2rem);
+}
+
 .no-favs-creatures {
+  font-size: clamp(1rem, 5vw, 2rem);
+  text-align: center;
   margin-top: 30%;
 }
 
@@ -37,4 +43,14 @@
 
 .favs-gallery .download-btn {
   display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .favorites {
+    padding: 0;
+  }
+
+  .favorites > h2 {
+    margin-top: 1rem;
+  }
 }
