@@ -5,6 +5,7 @@ import Button from '../../components/Button/Button';
 import useBattle from '../../hooks/useBattle/useBattle';
 import UseReducer from '../../components/UseReducer/UseReducer';
 import { useMemo, useState } from 'react';
+import StatsCard from '../../components/StatsCard/StatsCard';
 
 const Battle = () => {
   const { creatureId } = useParams();
@@ -83,27 +84,7 @@ const Battle = () => {
                   <div className='img-container'>
                     <img src={creature.imgUrl} alt='creature-image' />
                   </div>
-                  <div className='stats-in-fight flex-container'>
-                    <h2>Stats</h2>
-                    <p>
-                      Vida <span>{creature.stats.vida}</span>
-                    </p>
-                    <p>
-                      Fuerza <span>{creature.stats.fuerza}</span>
-                    </p>
-                    <p>
-                      Defensa <span>{creature.stats.defensa}</span>
-                    </p>
-                    <p>
-                      Velocidad <span>{creature.stats.velocidad}</span>
-                    </p>
-                    <p>
-                      Inteligencia <span>{creature.stats.inteligencia}</span>
-                    </p>
-                    <p>
-                      Agilidad <span>{creature.stats.agilidad}</span>
-                    </p>
-                  </div>
+                  <StatsCard beast={creature} className='stats-in-fight' />
                 </div>
                 <div className='vs flex-container'>
                   <p>Vs</p>
@@ -114,27 +95,7 @@ const Battle = () => {
                     <div className='img-container'>
                       <img src={enemy.imgUrl} alt='enemy-image' />
                     </div>
-                    <div className='stats-in-fight flex-container'>
-                      <h2>Stats</h2>
-                      <p>
-                        Vida <span>{enemy.stats.vida}</span>
-                      </p>
-                      <p>
-                        Fuerza <span>{enemy.stats.fuerza}</span>
-                      </p>
-                      <p>
-                        Defensa <span>{enemy.stats.defensa}</span>
-                      </p>
-                      <p>
-                        Velocidad <span>{enemy.stats.velocidad}</span>
-                      </p>
-                      <p>
-                        Inteligencia <span>{enemy.stats.inteligencia}</span>
-                      </p>
-                      <p>
-                        Agilidad <span>{enemy.stats.agilidad}</span>
-                      </p>
-                    </div>
+                    <StatsCard beast={enemy} className='stats-in-fight' />
                   </div>
                 )}
               </div>
@@ -153,27 +114,7 @@ const Battle = () => {
               <div className='img-container'>
                 <img src={creature.imgUrl} alt='creature-image' />
               </div>
-              <div className='stats-in-fight flex-container'>
-                <h2>Stats</h2>
-                <p>
-                  Vida <span>{creature.stats.vida}</span>
-                </p>
-                <p>
-                  Fuerza <span>{creature.stats.fuerza}</span>
-                </p>
-                <p>
-                  Defensa <span>{creature.stats.defensa}</span>
-                </p>
-                <p>
-                  Velocidad <span>{creature.stats.velocidad}</span>
-                </p>
-                <p>
-                  Inteligencia <span>{creature.stats.inteligencia}</span>
-                </p>
-                <p>
-                  Agilidad <span>{creature.stats.agilidad}</span>
-                </p>
-              </div>
+              <StatsCard beast={creature} className='stats-in-fight' />
             </div>
             {initialState && (
               <UseReducer

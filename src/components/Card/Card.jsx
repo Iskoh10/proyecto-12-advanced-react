@@ -7,6 +7,9 @@ import Favs from '../Favs/Favs';
 import Modal from '../Modal/Modal';
 import RatingBox from '../RatingBox/RatingBox';
 import { useNavigate } from 'react-router-dom';
+import StatsCard from '../StatsCard/StatsCard';
+import HeaderCard from '../HeaderCard/HeaderCard';
+import DetailsCard from '../DetailsCard/DetailsCard';
 
 const Card = ({ creature, className = '' }) => {
   const { ratings, setRating, favorites, toggleFav } = useCreaturesContext();
@@ -17,7 +20,6 @@ const Card = ({ creature, className = '' }) => {
     e.stopPropagation();
     if (creature.download) {
       setShowModal(true);
-      console.log(e.target);
     }
   };
 
@@ -37,57 +39,8 @@ const Card = ({ creature, className = '' }) => {
     <>
       <article className={`card flex-container ${className}`}>
         <div className='card-container flex-container'>
-          <header className='card-header flex-container'>
-            {creature.beastType && (
-              <p className='type-beast'>{creature.beastType.name}</p>
-            )}
-            <h2>{creature.name}</h2>
-            <div className='symbol-container flex-container'>
-              <img
-                src={`/family-icons/${creature.symbol}`}
-                alt={
-                  creature.symbol
-                    ? creature.symbol.replace('.svg', '')
-                    : 'criatura'
-                }
-              />
-              <div
-                className='type-color-bg'
-                style={{ backgroundColor: creature.beastType.color }}
-              ></div>
-            </div>
-            <div
-              className='beast-type-color flex-container'
-              style={{ backgroundColor: creature.beastType.color }}
-            ></div>
-          </header>
-          <div className='details flex-container'>
-            <p>Descripción</p>
-            <p>
-              {creature.description.length > 65
-                ? creature.description.slice(0, 65) + '...'
-                : creature.description}
-            </p>
-            <div className='atk-def flex-container'>
-              <div className='atk-name-value flex-container'>
-                <p>Ataque</p>
-                <p>
-                  {creature.atkName.length > 15
-                    ? creature.atkName.slice(0, 15) + '...'
-                    : creature.atkName}
-                </p>
-              </div>
-              <div className='def-name-value flex-container'>
-                <p>Defensa</p>
-                <p>
-                  {' '}
-                  {creature.defName.length > 15
-                    ? creature.defName.slice(0, 15) + '...'
-                    : creature.defName}
-                </p>
-              </div>
-            </div>
-          </div>
+          <HeaderCard beast={creature} />
+          <DetailsCard beast={creature} />
           <figure className='beast-img-container'>
             {creature.imgUrl && (
               <img src={creature.imgUrl} alt={creature.name} />
@@ -109,31 +62,7 @@ const Card = ({ creature, className = '' }) => {
                 onChange={(value) => setRating(creature.name, value)}
               />
 
-              <div
-                className={`stats flex-container ${
-                  creature.download ? 'is-download' : ''
-                }`}
-              >
-                <h2>Stats</h2>
-                <p>
-                  Vida <span>{creature.stats.vida}</span>
-                </p>
-                <p>
-                  Fuerza <span>{creature.stats.fuerza}</span>
-                </p>
-                <p>
-                  Defensa <span>{creature.stats.defensa}</span>
-                </p>
-                <p>
-                  Velocidad <span>{creature.stats.velocidad}</span>
-                </p>
-                <p>
-                  Inteligencia <span>{creature.stats.inteligencia}</span>
-                </p>
-                <p>
-                  Agilidad <span>{creature.stats.agilidad}</span>
-                </p>
-              </div>
+              <StatsCard beast={creature} />
               {creature.download && (
                 <Button
                   className='download-btn'

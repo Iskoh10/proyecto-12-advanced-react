@@ -165,6 +165,10 @@
   height: 70vh;
 }
 
+.battling-time .img-container-enemy {
+  top: 5%;
+}
+
 .img-container-creature,
 .img-container-enemy {
   position: absolute;
@@ -266,6 +270,16 @@
   z-index: 2;
 }
 
+@media screen and (max-width: 768px) {
+  .img-container-creature {
+    bottom: 80px;
+  }
+
+  .battling-time .img-container-enemy {
+    top: 25%;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .battle {
     padding: 1rem;
@@ -316,13 +330,12 @@
     height: 400px;
   }
 
+  .battling-time .img-container-enemy {
+    top: 25%;
+  }
   .img-container-creature {
     bottom: 180px;
     left: 50px;
-  }
-
-  .img-container-enemy {
-    top: 180px;
   }
 
   .battle-end {
