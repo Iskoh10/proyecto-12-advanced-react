@@ -5,8 +5,6 @@ import './Modal.css';
 const Modal = ({ className = '', children, isOpen, onClose, noBtn }) => {
   const modalRef = useRef();
 
-  console.log('soy el modal y me renderizo');
-
   useEffect(() => {
     if (modalRef.current) {
       if (isOpen) {

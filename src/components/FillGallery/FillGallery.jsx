@@ -2,8 +2,6 @@ import './FillGallery.css';
 import Card from '../Card/Card';
 
 const FillGallery = ({ creatures }) => {
-  console.log(creatures);
-
   return (
     <section className='gallery-grid'>
       {creatures &&

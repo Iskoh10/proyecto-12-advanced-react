@@ -31,13 +31,10 @@ const useBattle = ({ creatures, creatureId }) => {
     let result;
 
     if (powerCreature === powerEnemy) {
-      console.log('Han empatado');
       result = 'Empatado';
     } else if (powerCreature > powerEnemy) {
-      console.log('Has ganado');
       result = 'Ganado';
     } else {
-      console.log('Has perdido');
       result = 'Perdido';
     }
 

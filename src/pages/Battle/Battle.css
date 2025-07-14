@@ -81,8 +81,10 @@
 
 .img-container > img {
   object-fit: contain;
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  min-width: 100%;
+  width: 200px;
 }
 
 .my-creature .img-container:hover {
@@ -166,7 +168,7 @@
 }
 
 .battling-time .img-container-enemy {
-  top: 5%;
+  top: 10%;
 }
 
 .img-container-creature,
@@ -184,13 +186,29 @@
 .img-container-enemy {
   top: 25%;
   right: 8%;
-  animation: enemy 3s ease-out infinite alternate;
 }
 
 .img-container-creature > img,
 .img-container-enemy > img {
+  min-width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
-  width: 100%;
+  width: 200px;
+}
+
+.img-container-enemy > img {
+  offset-path: path(
+    'M100,100 m-20,0 a20,20 0 1,1 40,0 a40,40 0 1,1 -80,0 a40,40 0 1,1 90,0'
+  );
+  offset-distance: 0%;
+  offset-rotate: 0deg;
+  animation: attack 4s linear infinite;
+}
+
+@keyframes attack {
+  to {
+    offset-distance: 100%;
+  }
 }
 
 @keyframes myCreature {
@@ -202,18 +220,6 @@
   }
   100% {
     transform: translateX(10%) translateY(10%);
-  }
-}
-
-@keyframes enemy {
-  0% {
-    transform: translateX(0%);
-  }
-  50% {
-    transform: translateX(-30%);
-  }
-  100% {
-    transform: translateX(-10%);
   }
 }
 
@@ -333,9 +339,19 @@
   .battling-time .img-container-enemy {
     top: 25%;
   }
-  .img-container-creature {
+
+  .battling-time .img-container-creature > img,
+  .battling-time .img-container-enemy > img {
+    width: 150px;
+  }
+
+  .battling-time .img-container-creature {
     bottom: 180px;
-    left: 50px;
+    left: 10px;
+  }
+
+  .battling-time .img-container-enemy {
+    right: 20%;
   }
 
   .battle-end {

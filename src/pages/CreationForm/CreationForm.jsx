@@ -32,7 +32,6 @@ const CreationForm = () => {
             submit(e, (data) => {
               setFormState(data);
               setShowModal(true);
-              console.log('Datos recibidos:', data);
             })
           }
         >
@@ -64,7 +63,7 @@ const CreationForm = () => {
               labelText='Descripción'
               refs={refs}
             />
-            <Select refs={refs} errors={errors} />
+            <Select refs={refs} />
             <Button className='create-btn' text='Crear' />
           </fieldset>
         </form>

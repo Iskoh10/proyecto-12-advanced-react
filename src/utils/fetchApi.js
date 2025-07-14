@@ -1,4 +1,5 @@
 const fetchApi = async ({
+  setLoading,
   setCreature,
   onCreatureGenerated,
   setError,
@@ -13,20 +14,19 @@ const fetchApi = async ({
   description
 }) => {
   try {
+    setLoading(true);
+
     const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
     const data = await response.json();
     const results = data.results;
     const randomIndex = Math.floor(Math.random() * results.length);
     const randomBeast = results[randomIndex];
-    console.log(randomBeast.name);
 
     const responseBeast = await fetch(randomBeast.url);
     const dataBeast = await responseBeast.json();
     const imgUrl = dataBeast.sprites.other.dream_world.front_default;
     const hpValue = dataBeast.stats[0].base_stat;
-    console.log(dataBeast);
-    console.log(imgUrl);
-    console.log(dataBeast.abilities);
+
     const randomIdx = Math.floor(Math.random() * dataBeast.abilities.length);
     const ability = dataBeast.abilities[randomIdx];
     const assignedAbility = ability.ability.name;
@@ -56,6 +56,8 @@ const fetchApi = async ({
     onCreatureGenerated?.(newCreature);
   } catch (error) {
     setError('Hubo un problema con tu Criatura, intentalo de nuevo');
+  } finally {
+    setLoading(false);
   }
 };
 

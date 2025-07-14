@@ -1,6 +1,6 @@
+import './Home.css';
 import iconNames from '../../data/iconNames';
 import typeNames from '../../data/typeNames';
-import './Home.css';
 
 const Home = () => {
   return (

@@ -31,8 +31,6 @@ const Battle = () => {
     };
   }, [creature, rewardPoints]);
 
-  console.log('InitialState:', initialState);
-
   const handleUpgrades = (updatedStats) => {
     const improvingCreature = {
       ...creature,
@@ -45,8 +43,10 @@ const Battle = () => {
         vida: updatedStats.vida
       }
     };
+
     updateCreature(improvingCreature);
     setShowCompletedMsg(true);
+
     setTimeout(() => {
       navigate('/gallery');
     }, 2000);
@@ -68,7 +68,6 @@ const Battle = () => {
           >
             {isBattling ? (
               <div className='battling-time flex-container'>
-                {console.log(creature.imgUrl)}
                 <div className='img-container-creature'>
                   <img src={creature.imgUrl} alt={creature.name} />
                 </div>

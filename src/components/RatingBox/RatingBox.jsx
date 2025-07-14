@@ -1,5 +1,5 @@
-import { Fragment } from 'react';
 import './RatingBox.css';
+import { Fragment } from 'react';
 
 const RatingBox = ({ id, rating, onChange }) => {
   return (

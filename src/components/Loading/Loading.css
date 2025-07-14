@@ -1,0 +1,157 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+}
+
+.wrapper {
+  position: fixed;
+  width: 300px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--isc-primary-color);
+  border-radius: 2rem;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.wrapper h3 {
+  font-size: clamp(1rem, 5vw, 2rem);
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  z-index: 2;
+}
+
+.loader {
+  --size: 250px;
+  position: absolute;
+  border-radius: 3rem;
+  width: var(--size);
+  height: var(--size);
+  top: 50%;
+  left: 50%;
+  margin: calc(var(--size) / -2);
+  background-color: white;
+  filter: blur(10px) contrast(15);
+}
+
+.loader p span {
+  background-color: black;
+  position: absolute;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.loader p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.loader p:nth-child(1) {
+  position: absolute;
+  animation: skewing-child 0.2s ease-in-out infinite alternate;
+
+  span {
+    width: calc(var(--size) / 10);
+    height: calc(var(--size) / 10);
+    margin: calc(var(--size) / -20);
+    animation: moving 2s cubic-bezier(0.97, 0.01, 0.12, 0.99) infinite alternate;
+  }
+}
+
+.loader p:nth-child(2) {
+  position: absolute;
+  animation: squishing 1s ease-in-out infinite alternate;
+
+  span {
+    width: calc(var(--size) / 4);
+    height: calc(var(--size) / 4);
+    top: 50%;
+    left: 50%;
+    margin: calc(var(--size) / -8);
+    animation: skewing 2s 1.5s ease-in-out infinite;
+  }
+}
+
+@keyframes skewing {
+  0% {
+    transform: skewX(6deg);
+  }
+  10% {
+    transform: skewX(-6deg);
+  }
+  20% {
+    transform: skewX(4deg);
+  }
+  30% {
+    transform: skewX(-4deg);
+  }
+  40% {
+    transform: skewX(2deg);
+  }
+  50% {
+    transform: skewX(-6deg);
+  }
+  55% {
+    transform: skewX(6deg);
+  }
+  60% {
+    transform: skewX(-5deg);
+  }
+  65% {
+    transform: skewX(5deg);
+  }
+  70% {
+    transform: skewX(-4deg);
+  }
+  75% {
+    transform: skewX(4deg);
+  }
+  80% {
+    transform: skewX(-3deg);
+  }
+  85% {
+    transform: skewX(3deg);
+  }
+  90% {
+    transform: skewX(-2deg);
+  }
+  95% {
+    transform: skewX(2deg);
+  }
+  100% {
+    transform: skewX(1deg);
+  }
+}
+
+@keyframes skewing-child {
+  0% {
+    transform: skewX(-10deg);
+  }
+  100% {
+    transform: skewX(10deg);
+  }
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(calc(var(--size) / -2.5));
+  }
+  30% {
+    transform: translateX(calc(var(--size) / -10));
+  }
+  70% {
+    transform: translateX(calc(var(--size) / 10));
+  }
+  100% {
+    transform: translateX(calc(var(--size) / 2.5));
+  }
+}

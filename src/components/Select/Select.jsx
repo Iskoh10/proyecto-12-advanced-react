@@ -1,6 +1,6 @@
 import './Select.css';
 
-const Select = ({ refs, errors }) => {
+const Select = ({ refs }) => {
   return (
     <div className='select-container flex-container'>
       <label htmlFor='attribute-select' className='select-label'>

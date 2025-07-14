@@ -7,6 +7,7 @@ import statsGenerator from '../../utils/statsGenerator';
 import symbolAndTypeGenerator from '../../utils/symbolAndTypeGenerator';
 import fetchApi from '../../utils/fetchApi';
 import Card from '../Card/Card';
+import Loading from '../Loading/Loading';
 
 const NewCard = ({
   isOpen,
@@ -31,12 +32,15 @@ const NewCard = ({
       vida: ''
     }
   });
+
   const [error, setError] = useState();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     if (!isOpen) return;
 
     fetchApi({
+      setLoading,
       setCreature,
       onCreatureGenerated,
       setError,
@@ -52,17 +56,19 @@ const NewCard = ({
     });
   }, [isOpen, mainAttribute]);
 
-  console.log('Datos de la Criatura creada:', creature);
   return (
     <>
-      <Modal className='new-card-modal' isOpen={isOpen} onClose={onClose}>
-        <Card creature={creature} className='new-card' />
-        {error && (
-          <div className='fetch-error-container'>
-            <p className='error-msg'>{error}</p>
-          </div>
-        )}
-      </Modal>
+      {loading && <Loading />}
+      {!loading && (
+        <Modal className='new-card-modal' isOpen={isOpen} onClose={onClose}>
+          <Card creature={creature} className='new-card' />
+          {error && (
+            <div className='fetch-error-container'>
+              <p className='error-msg'>{error}</p>
+            </div>
+          )}
+        </Modal>
+      )}
     </>
   );
 };

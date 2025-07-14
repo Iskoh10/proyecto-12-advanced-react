@@ -87,7 +87,6 @@ const Card = ({ creature, className = '' }) => {
               className='ok-battle-btn'
               text='Vamos'
               onClick={() => {
-                console.log('Luchar');
                 navigate(`/battle/${creatureId}`);
               }}
             />
