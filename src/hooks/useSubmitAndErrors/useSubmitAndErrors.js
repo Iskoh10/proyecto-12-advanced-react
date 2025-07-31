@@ -58,12 +58,13 @@ const useSubmitAndErrors = () => {
 
     setErrors({});
     if (onSuccess) onSuccess(data);
-    resetForm();
   });
   return {
     refs,
     errors,
-    submit
+    submit,
+    setErrors,
+    resetForm
   };
 };
 

@@ -6,7 +6,8 @@
   justify-content: space-between;
 }
 
-.explanation-container {
+.explanation-container,
+section.guide {
   background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   border: 2px solid var(--isc-tank-color);
@@ -62,6 +63,39 @@
 
 .tablet-mobile-vw {
   display: none;
+}
+
+section.guide::before {
+  position: absolute;
+  content: '!';
+  color: var(--isc-secondary-color);
+  width: 50px;
+  height: 50px;
+  top: 5%;
+  right: 5%;
+  filter: hue-rotate(0deg);
+  background-color: var(--isc-warrior-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  animation: hueShift 2s linear infinite;
+}
+
+@keyframes hueShift {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.guide > p {
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.5rem;
 }
 
 .family-icons,

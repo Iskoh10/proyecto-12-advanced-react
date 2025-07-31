@@ -1,5 +1,5 @@
 import './CreationForm.css';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import useSubmitAndErrors from '../../hooks/useSubmitAndErrors/useSubmitAndErrors';
 import Button from '../../components/Button/Button';
 import Select from '../../components/Select/Select';
@@ -9,8 +9,8 @@ import { useCreaturesContext } from '../../Providers/CreaturesContext';
 import NewCard from '../../components/NewCard/NewCard';
 
 const CreationForm = () => {
-  const { addCreature } = useCreaturesContext();
-  const { refs, errors, submit } = useSubmitAndErrors();
+  const { addCreature, creatures } = useCreaturesContext();
+  const { refs, errors, submit, setErrors, resetForm } = useSubmitAndErrors();
   const [formState, setFormState] = useState({
     name: '',
     atkName: '',
@@ -20,6 +20,29 @@ const CreationForm = () => {
   });
   const [showModal, setShowModal] = useState(false);
 
+  const handleSubmit = (e) => {
+    submit(e, (data) => {
+      const exists = creatures.some(
+        (c) => c.name.toLowerCase() === data.name.trim().toLowerCase()
+      );
+      if (exists) {
+        setErrors({
+          ...errors,
+          name: { message: 'Este nombre ya está en uso, prueba con otro.' }
+        });
+
+        if (refs.nameInput.current) {
+          refs.nameInput.current.value = '';
+          refs.nameInput.current.focus();
+        }
+        return;
+      }
+
+      setFormState(data);
+      setShowModal(true);
+      resetForm();
+    });
+  };
   return (
     <main className='creation-form flex-container'>
       <div className='form-container flex-container'>
@@ -28,12 +51,7 @@ const CreationForm = () => {
         </div>
         <form
           className='creation-beast-form flex-container'
-          onSubmit={(e) =>
-            submit(e, (data) => {
-              setFormState(data);
-              setShowModal(true);
-            })
-          }
+          onSubmit={handleSubmit}
         >
           <fieldset>
             <legend>Creación de Criaturas</legend>

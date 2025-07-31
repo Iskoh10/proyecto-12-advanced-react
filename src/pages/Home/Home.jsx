@@ -51,6 +51,23 @@ const Home = () => {
           </p>
         </div>
       </section>
+      <section className='guide flex-container'>
+        <div className='guide'>
+          <h3>--La guía--</h3>
+          <p>
+            Como principiante en el juego tendrás que crear tus propias
+            criaturas a través del formulario. Una vez creada, tu criatura
+            aparecerá en la galería junto a criaturas del sistema. Si haces
+            hover en cada carta podrás ver las stats, si están en azul son del
+            sistema y no podrás usarlas para combatir. Las tuyas tienen las
+            stats en rojo, si pulsas en las stats el sistema te preguntará si
+            quieres luchar. Tu oponente se elige al azar. Tras el combate sabrás
+            si has ganado, tu recompensa serán puntos de mejora que podrás
+            asignar libremente. Haz que tu criatura sea invencible-
+          </p>
+        </div>
+      </section>
+
       <section className='family-icons flex-container'>
         <h3>Los Clanes</h3>
         {iconNames.map((name, index) => (
